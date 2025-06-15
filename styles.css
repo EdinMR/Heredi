@@ -1,0 +1,745 @@
+/* Variables CSS para una fácil personalización */
+:root {
+    --color-primary: #007bff; /* Azul brillante */
+    --color-primary-rgb: 0, 123, 255; /* Versión RGB para sombras */
+    --color-secondary: #6c757d; /* Gris oscuro */
+    --color-text: #343a40; /* Texto principal oscuro */
+    --color-text-light: #f8f9fa; /* Texto claro para fondos oscuros */
+    --color-text-alt: #adb5bd; /* Texto alternativo/placeholder */
+    --color-background: #ffffff; /* Fondo claro principal */
+    --color-background-darker: #f0f2f5; /* Fondo ligeramente más oscuro para secciones */
+    --color-background-footer: #212529; /* Fondo muy oscuro para el footer */
+    --color-border: #dee2e6; /* Color de borde ligero */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --font-family-headings: 'Poppins', sans-serif;
+    --font-family-body: 'Open Sans', sans-serif;
+    --border-radius-base: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* Reset básico y estilos generales */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-body);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-headings);
+    color: var(--color-text);
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: darken(var(--color-primary), 10%); /* Ajustar según tus necesidades */
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Header --- */
+.header {
+    background-color: var(--color-background);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--color-shadow);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--font-family-headings);
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: var(--color-primary);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 5px 0;
+    position: relative;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-link i {
+    margin-right: 5px;
+    color: var(--color-primary); /* Iconos del color primario */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Toggle del menú para móviles */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--color-text);
+    padding: 10px;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animación del hamburguesa */
+.nav-toggle[aria-expanded="true"] .hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Caja de búsqueda */
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-base);
+    overflow: hidden;
+    background-color: var(--color-background-darker);
+}
+
+.search-input {
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    background: transparent;
+    color: var(--color-text);
+    width: 150px; /* Ancho ajustable */
+}
+
+.search-input:focus {
+    outline: none;
+    background-color: var(--color-background);
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 1em;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.search-button:hover {
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+}
+
+/* --- Secciones Generales --- */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+    color: var(--color-text);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.section-description strong {
+    color: var(--color-primary);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0056b3 100%);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden; /* Para contener las partículas */
+    min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima de las partículas */
+}
+
+.hero-title {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta-buttons .btn {
+    margin: 0 15px;
+}
+
+/* Estilos de partículas para Hero Section */
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: moveParticle linear infinite;
+    z-index: 0;
+    pointer-events: none; /* Ignorar eventos de mouse */
+}
+
+@keyframes moveParticle {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+    25% { transform: translate(random(-100px, 100px), random(-100px, 100px)) scale(1.1); opacity: 0.4; }
+    50% { transform: translate(random(-200px, 200px), random(-200px, 200px)) scale(1); opacity: 0.3; }
+    75% { transform: translate(random(-150px, 150px), random(-150px, 150px)) scale(0.9); opacity: 0.2; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+}
+
+/* Función simple para `random` en CSS (no nativo, pero ilustrativo) */
+/* Esto se maneja mejor con JavaScript como ya lo tienes */
+
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: var(--border-radius-base);
+    font-weight: 600;
+    font-size: 1.1em;
+    text-align: center;
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--color-primary), 10%); /* Ajustar el color */
+    border-color: darken(var(--color-primary), 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.3);
+    text-decoration: none; /* Asegurar que no haya subrayado en hover */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.3);
+    text-decoration: none;
+}
+
+/* --- About Section --- */
+.about-section {
+    background-color: var(--color-background-darker);
+    padding: 80px 0;
+}
+
+.about-section .section-description {
+    text-align: left; /* Alineación de texto más natural para el "Sobre mí" */
+    margin: 0 auto 15px;
+    max-width: 900px;
+}
+
+.about-section .section-description:last-of-type {
+    margin-bottom: 0;
+}
+
+/* --- Blog Section --- */
+.blog-section {
+    padding: 80px 0;
+    background-color: var(--color-background);
+}
+
+.blog-section ul {
+    max-width: 800px;
+    margin: 30px auto 20px;
+    padding-left: 20px;
+    list-style: disc; /* Vuelven los puntos para las listas */
+    color: var(--color-text);
+}
+
+.blog-section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.blog-section ul li strong {
+    color: var(--color-primary);
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: var(--color-background-darker);
+    padding: 80px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    background-color: var(--color-background);
+    padding: 40px;
+    border-radius: var(--border-radius-base);
+    box-shadow: 0 5px 15px var(--color-shadow);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-base);
+    font-size: 1em;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.2);
+    outline: none;
+}
+
+.contact-form .btn-primary {
+    width: auto; /* Para que el botón no ocupe todo el ancho */
+    display: block; /* Ocupa su propio espacio */
+    margin: 0 auto; /* Centrar el botón */
+    padding: 12px 40px; /* Un poco más de padding para el botón de enviar */
+}
+
+
+/* --- Newsletter Section (NUEVOS ESTILOS) --- */
+.newsletter-section {
+    background-color: var(--color-background-darker);
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid var(--color-border); /* Añadir un borde superior sutil */
+}
+
+.newsletter-section .section-title {
+    color: var(--color-primary); /* Título del color primario */
+    margin-bottom: 20px;
+    font-size: 2.2em; /* Un poco más pequeño que los títulos de sección principales */
+}
+
+.newsletter-section .section-title::after {
+    display: none; /* Ocultar el subrayado para este título, si quieres */
+}
+
+
+.newsletter-form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+}
+
+.newsletter-form .form-group {
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-base);
+    background-color: var(--color-background);
+    color: var(--color-text); /* Color de texto más estándar */
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: var(--color-text-alt);
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.2);
+    outline: none;
+}
+
+.newsletter-form .btn-primary {
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: var(--border-radius-base);
+    flex-shrink: 0;
+    margin: 0; /* Asegurar que no tenga márgenes no deseados */
+}
+
+/* Ocultar el label visualmente pero mantenerlo para accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--color-background-footer);
+    color: var(--color-text-alt);
+    padding: 40px 0;
+    font-size: 0.9em;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 30px; /* Espacio entre columnas */
+}
+
+.footer-social, .footer-links {
+    flex: 1;
+    min-width: 200px; /* Ancho mínimo para cada columna */
+}
+
+.footer-social p {
+    margin-bottom: 15px;
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor; /* Usa el color del padre */
+}
+
+.social-icon.github:hover {
+    background-color: #333; /* Color de GitHub */
+    transform: translateY(-3px);
+}
+.social-icon.linkedin:hover {
+    background-color: #0077B5; /* Color de LinkedIn */
+    transform: translateY(-3px);
+}
+.social-icon.whatsapp:hover {
+    background-color: #25D366; /* Color de WhatsApp */
+    transform: translateY(-3px);
+}
+
+.footer-links ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Lista vertical */
+    gap: 10px;
+}
+
+.footer-links a {
+    color: var(--color-text-alt);
+    font-weight: 400;
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    color: var(--color-text-alt);
+}
+
+/* --- Media Queries (Responsive Design) --- */
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        flex-basis: 100%; /* Ocupa todo el ancho */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .nav {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin: 0 auto; /* Centrar el botón de hamburguesa */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Oculto por defecto en móvil */
+        gap: 15px; /* Reducir el espacio entre elementos */
+        margin-top: 15px;
+    }
+
+    .nav-list.active {
+        display: flex; /* Mostrar cuando está activo */
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .search-item {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 300px; /* Limitar el ancho del search box */
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: 3em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+
+    .hero-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-cta-buttons .btn {
+        margin: 0;
+        width: 80%; /* Hacer que los botones ocupen más ancho */
+        max-width: 250px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .contact-form, .newsletter-form {
+        padding: 25px;
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: center;
+    }
+    .newsletter-form .form-group {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        min-width: unset; /* Elimina el ancho mínimo para mejor adaptación */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-social, .footer-links {
+        min-width: unset; /* Eliminar ancho mínimo */
+        width: 100%; /* Ocupar todo el ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
