@@ -1,1 +1,267 @@
-<h1>Heredi Page</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edin Herrera Lumba - Administrador, Desarrollador Web y Analista de Datos</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#hero">Edin Herrera Lumba</a>
+            </div>
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Abrir menú de navegación">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> Sobre mí</a></li>
+                    <li><a href="#blog" class="nav-link"><i class="fas fa-newspaper"></i> Blog</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                    <li class="search-item">
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar..." class="search-input">
+                            <button class="search-button" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Hola, soy Edin Herrera Lumba</h1>
+                    <p class="hero-subtitle">Estudiante de Administración, Desarrollador Web y Analista de Datos con pasión por la innovación y la optimización.</p>
+                    <div class="hero-cta-buttons">
+                        <a href="#about" class="btn btn-primary">Conóceme</a>
+                        <a href="#contact" class="btn btn-secondary">Contáctame</a>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">Sobre mí</h2>
+                <p class="section-description">Soy **Edin Herrera Lumba**, un apasionado estudiante de Administración con una sólida base en **desarrollo web** y **análisis de datos**. Mi trayectoria me ha permitido fusionar la visión estratégica de la administración con la capacidad de crear soluciones tecnológicas robustas y la habilidad de extraer conocimiento valioso de los datos.</p>
+                <p class="section-description">Mi enfoque se centra en la **innovación** y la **optimización de procesos** a través de la tecnología. Disfruto creando experiencias web intuitivas y eficientes, así como transformando datos complejos en información comprensible que impulse decisiones informadas. Siempre estoy en busca de nuevos desafíos que me permitan aprender y crecer tanto profesional como personalmente.</p>
+                <p class="section-description">Mis habilidades incluyen **HTML5, CSS3, JavaScript, Python, SQL**, y herramientas de visualización de datos como Power BI y Tableau. Estoy comprometido con el aprendizaje continuo y con la aplicación de mis conocimientos para generar un impacto positivo.</p>
+            </div>
+        </section>
+
+        <section id="blog" class="section blog-section">
+            <div class="container">
+                <h2 class="section-title">Blog</h2>
+                <p class="section-description">Bienvenido a mi blog, un espacio donde comparto mis conocimientos y experiencias en el mundo de la **administración, el desarrollo web y el análisis de datos**. Aquí encontrarás artículos sobre:</p>
+                <ul>
+                    <li>**Mejores prácticas en desarrollo front-end y back-end.**</li>
+                    <li>**Estrategias para la optimización de negocios.**</li>
+                    <li>**Tutoriales sobre herramientas de análisis de datos como Python (Pandas, NumPy), SQL y Excel avanzado.**</li>
+                    <li>**Reflexiones sobre las últimas tendencias en tecnología y su impacto en el ámbito empresarial.**</li>
+                    <li>**Casos de estudio y soluciones a problemas comunes en proyectos de datos y desarrollo.**</li>
+                </ul>
+                <p class="section-description">Mi objetivo es proporcionar contenido valioso que te ayude a aprender, inspirarte y mantenerte al día con las innovaciones en estas áreas. ¡Espero que disfrutes la lectura y encuentres información útil para tus propios proyectos!</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-description">¡Me encantaría saber de ti! Si tienes un proyecto en mente, una pregunta, o simplemente quieres conectar, no dudes en escribirme. Estoy disponible para colaboraciones, consultorías y oportunidades de desarrollo en las áreas de administración, desarrollo web y análisis de datos.</p>
+                <p class="section-description">Puedes contactarme directamente a través del siguiente formulario o visitando mis perfiles en redes sociales. Responderé a la brevedad posible.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="newsletter" class="section newsletter-section">
+            <div class="container">
+                <h2 class="section-title">Suscríbete a mi Newsletter</h2>
+                <p class="section-description">Sé el primero en enterarte de mis últimas publicaciones en el blog, nuevos proyectos, recursos exclusivos y noticias relevantes sobre desarrollo web, análisis de datos y administración.</p>
+                <p class="section-description">¡No te pierdas ningún contenido valioso! Tu privacidad es importante para mí, y nunca compartiré tu correo electrónico.</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <label for="newsletter-email" class="sr-only">Tu correo electrónico:</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Suscribirme</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Proyectos</h2>
+                <p class="section-description">Aquí explorarás una selección de mis proyectos más recientes y destacados. Cada proyecto refleja mi compromiso con la calidad, la innovación y la resolución efectiva de problemas, combinando mis habilidades en desarrollo web y análisis de datos para ofrecer soluciones completas y funcionales.</p>
+                <p class="section-description">Desde **aplicaciones web interactivas** hasta **análisis de datos complejos con visualizaciones impactantes**, cada trabajo es una muestra de mi capacidad para transformar ideas en realidad y generar valor a través de la tecnología. Te invito a explorar los detalles de cada proyecto y a ver cómo puedo aplicar estas habilidades en tus propios desafíos.</p>
+                </div>
+        </section>
+
+        <section id="services" class="section services-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Servicios</h2>
+                <p class="section-description">Ofrezco una gama de servicios especializados diseñados para ayudarte a alcanzar tus objetivos, ya sea que necesites una presencia online robusta o insights accionables a partir de tus datos. Mis servicios incluyen:</p>
+                <ul>
+                    <li>**Desarrollo Web (Front-end y Back-end):** Creación de sitios web responsivos, aplicaciones web a medida y optimización de rendimiento.</li>
+                    <li>**Análisis de Datos y Business Intelligence:** Recopilación, limpieza, análisis y visualización de datos para la toma de decisiones estratégicas.</li>
+                    <li>**Consultoría en Optimización de Procesos:** Identificación de ineficiencias y propuestas de soluciones tecnológicas para mejorar la productividad.</li>
+                    <li>**Desarrollo de Bases de Datos:** Diseño e implementación de bases de datos relacionales y no relacionales.</li>
+                </ul>
+                <p class="section-description">Trabajo de cerca con mis clientes para entender sus necesidades únicas y ofrecer soluciones personalizadas que impulsen el crecimiento y la eficiencia. ¡Hablemos de cómo puedo ayudarte!</p>
+            </div>
+        </section>
+
+        <section id="resources" class="section resources-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Recursos</h2>
+                <p class="section-description">En esta sección, comparto una colección de recursos útiles que he encontrado valiosos en mi propio viaje de aprendizaje y desarrollo. Aquí encontrarás herramientas, guías, tutoriales y enlaces a material de interés en las áreas de desarrollo web, análisis de datos y administración.</p>
+                <p class="section-description">Desde frameworks y librerías recomendadas, hasta cursos online y artículos de referencia, mi objetivo es crear un centro de recursos que beneficie a la comunidad. Espero que estos materiales te sirvan de apoyo en tus proyectos y te ayuden a expandir tus propias habilidades.</p>
+                </div>
+        </section>
+
+        <section id="testimonials" class="section testimonials-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">Testimonios</h2>
+                <p class="section-description">La satisfacción de mis clientes es mi principal prioridad. Aquí puedes leer lo que personas y empresas con las que he colaborado tienen que decir sobre mi trabajo, mi ética profesional y el impacto de mis soluciones.</p>
+                <p class="section-description">Cada testimonio es un reflejo de mi compromiso con la excelencia, la comunicación efectiva y la entrega de resultados que superan las expectativas. Me enorgullece construir relaciones sólidas y duraderas basadas en la confianza y el éxito mutuo. Si has trabajado conmigo, ¡me encantaría que compartieras tu experiencia!</p>
+                </div>
+        </section>
+        </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <p>Conecta conmigo:</p>
+                    <div class="social-links">
+                        <a href="https://github.com/tu_usuario" target="_blank" aria-label="GitHub" class="social-icon github">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/tu_usuario" target="_blank" aria-label="LinkedIn" class="social-icon linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://wa.me/tu_numero" target="_blank" aria-label="WhatsApp" class="social-icon whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.517-3.807-1.517-5.836 0-6.627 5.373-12 12-12s12 5.373 12 12-5.373 12-12 12c-1.933 0-3.812-.579-5.442-1.571l-6.058 1.666zm14.168-3.993c-.092.055-.187.095-.285.127-.123.04-.249.06-.375.06-.379 0-.61-.161-.83-.434-.099-.12-.224-.26-.356-.379-.17-.156-.339-.313-.497-.478-.17-.174-.34-.349-.504-.528-.158-.176-.324-.344-.486-.511-.149-.158-.3-.31-.448-.453-.13-.131-.264-.26-.39-.387-.107-.105-.213-.211-.318-.318-.113-.112-.225-.224-.336-.336-.129-.129-.258-.258-.387-.387-.179-.179-.359-.359-.538-.538-.073-.073-.146-.146-.219-.219-.148-.148-.296-.296-.444-.444-.108-.108-.216-.216-.324-.324-.132-.132-.264-.264-.396-.396-.108-.108-.216-.216-.324-.324-.134-.134-.268-.268-.402-.402-.11-.11-.22-.22-.33-.33-.136-.136-.272-.272-.408-.408-.103-.103-.206-.206-.309-.309-.138-.138-.276-.276-.414-.414-.101-.101-.202-.202-.303-.303-.14-.14-.28-.28-.42-.42-.104-.104-.208-.208-.312-.312-.142-.142-.284-.284-.426-.426-.105-.105-.21-.21-.315-.315-.144-.144-.288-.288-.432-.432-.107-.107-.214-.214-.321-.321-.146-.146-.292-.292-.438-.438-.109-.109-.218-.218-.327-.327-.148-.148-.296-.296-.444-.444-.111-.111-.222-.222-.333-.333-.15-.15-.3-.3-.45-.45-.098-.098-.196-.196-.294-.294-.152-.152-.304-.304-.456-.456-.096-.096-.192-.196-.288-.288-.154-.154-.308-.308-.462-.462-.095-.095-.19-.19-.285-.285-.156-.156-.312-.312-.468-.468-.093-.093-.186-.186-.279-.279-.158-.158-.316-.316-.474-.474-.09-.09-.18-.18-.27-.27-.16-.16-.32-.32-.48-.48-.088-.088-.176-.176-.264-.264-.162-.162-.324-.324-.486-.486-.085-.085-.17-.17-.255-.255-.164-.164-.328-.328-.492-.492-.082-.082-.164-.164-.246-.246-.166-.166-.332-.332-.498-.498-.079-.079-.158-.158-.237-.237-.168-.168-.336-.336-.504-.504-.076-.076-.152-.152-.228-.228-.17-.17-.34-.34-.51-.51-.073-.073-.146-.146-.219-.219-.172-.172-.344-.344-.516-.516-.07-.07-.14-.14-.21-.21-.174-.174-.348-.348-.522-.522-.066-.066-.132-.132-.198-.198-.176-.176-.352-.352-.528-.528-.063-.063-.126-.126-.189-.189-.178-.178-.356-.356-.534-.534-.06-.06-.12-.12-.18-.18-.18-.18-.36-.36-.54-.54-.057-.057-.114-.114-.171-.171-.182-.182-.364-.364-.546-.546-.054-.054-.108-.108-.162-.162-.184-.184-.368-.368-.552-.552-.05-.05-.1-.1-.15-.15-.186-.186-.372-.372-.558-.558-.047-.047-.094-.094-.141-.141-.188-.188-.376-.376-.564-.564-.043-.043-.086-.086-.129-.129-.19-.19-.38-.38-.57-.57-.04-.04-.08-.08-.12-.12-.192-.192-.384-.384-.576-.576-.036-.036-.072-.072-.108-.108-.194-.194-.388-.388-.582-.582-.033-.033-.066-.066-.099-.099-.196-.196-.392-.392-.588-.588-.03-.03-.06-.06-.09-.09-.198-.198-.396-.396-.594-.594-.027-.027-.054-.054-.081-.081-.2-.2-.4-.4-.6-.6-.024-.024-.048-.048-.072-.072-.202-.202-.404-.404-.606-.606-.02-.02-.04-.04-.06-.06-.204-.204-.408-.408-.612-.612-.017-.017-.034-.034-.051-.051-.206-.206-.412-.412-.618-.618-.013-.013-.026-.026-.039-.039-.208-.208-.416-.416-.624-.624-.009-.009-.018-.018-.027-.027-.21-.21-.42-.42-.63-.63-.005-.005-.01-.01-.015-.015-.212-.212-.424-.424-.636-.636-.002-.002-.004-.004-.006-.006-.214-.214-.428-.428-.642-.642-.001-.001-.002-.002-.003-.003-.216-.216-.432-.432-.648-.648 0 0-.001-.001-.001-.001-.218-.218-.436-.436-.654-.654 0 0 0 0-.001-.001-.22-.22-.44-.44-.66-.66-.001-.001-.001-.001-.002-.002-.222-.222-.444-.444-.666-.666-.001-.001-.001-.001-.001-.001-.224-.224-.448-.448-.672-.672 0 0 0 0-.001-.001-.226-.226-.452-.452-.678-.678 0 0-.001-.001-.001-.001-.228-.228-.456-.456-.684-.684-.001-.001-.001-.001-.001-.001-.23-.23-.46-.46-.69-.69-.001-.001-.001-.001-.001-.001-.232-.232-.464-.464-.696-.696 0 0 0 0-.001-.001-.234-.234-.468-.468-.702-.702-.001-.001-.001-.001-.001-.001-.236-.236-.472-.472-.708-.708-.001-.001-.001-.001-.001-.001-.238-.238-.476-.476-.714-.714-.001-.001-.001-.001-.001-.001-.24-.24-.48-.48-.72-.72-.001-.001-.001-.001-.001-.001-.242-.242-.484-.484-.726-.726 0 0 0 0-.001-.001-.244-.244-.488-.488-.732-.732-.001-.001-.001-.001-.001-.001-.246-.246-.492-.492-.738-.738-.001-.001-.001-.001-.001-.001-.248-.248-.496-.496-.744-.744-.001-.001-.001-.001-.001-.001-.25-.25-.5-.5-.75-.75-.001-.001-.001-.001-.001-.001-.252-.252-.504-.504-.756-.756-.001-.001-.001-.001-.001-.001-.254-.254-.508-.508-.762-.762-.001-.001-.001-.001-.001-.001-.256-.256-.512-.512-.768-.768-.001-.001-.001-.001-.001-.001-.258-.258-.516-.516-.774-.774-.001-.001-.001-.001-.001-.001-.26-.26-.52-.52-.78-.78-.001-.001-.001-.001-.001-.001-.262-.262-.524-.524-.786-.786-.001-.001-.001-.001-.001-.001-.264-.264-.528-.528-.792-.792-.001-.001-.001-.001-.001-.001-.266-.266-.532-.532-.798-.798-.001-.001-.001-.001-.001-.001-.268-.268-.536-.536-.804-.804-.001-.001-.001-.001-.001-.001-.27-.27-.54-.54-.81-.81-.001-.001-.001-.001-.001-.001-.272-.272-.544-.544-.816-.816-.001-.001-.001-.001-.001-.001-.274-.274-.548-.548-.822-.822-.001-.001-.001-.001-.001-.001-.276-.276-.552-.552-.828-.828-.001-.001-.001-.001-.001-.001-.278-.278-.556-.556-.834-.834-.001-.001-.001-.001-.001-.001-.28-.28-.56-.56-.84-.84-.001-.001-.001-.001-.001-.001-.282-.282-.564-.564-.846-.846-.001-.001-.001-.001-.001-.001-.284-.284-.568-.568-.852-.852-.001-.001-.001-.001-.001-.001-.286-.286-.572-.572-.858-.858-.001-.001-.001-.001-.001-.001-.288-.288-.576-.576-.864-.864-.001-.001-.001-.001-.001-.001-.29-.29-.58-.58-.87-.87-.001-.001-.001-.001-.001-.001-.292-.292-.584-.584-.876-.876-.001-.001-.001-.001-.001-.001-.294-.294-.588-.588-.882-.882-.001-.001-.001-.001-.001-.001-.296-.296-.592-.592-.888-.888-.001-.001-.001-.001-.001-.001-.298-.298-.596-.596-.894-.894-.001-.001-.001-.001-.001-.001-.3-.3-.6-.6-.9-.9-.001-.001-.001-.001-.001-.001-.302-.302-.604-.604-.906-.906-.001-.001-.001-.001-.001-.001-.304-.304-.608-.608-.912-.912-.001-.001-.001-.001-.001-.001-.306-.306-.612-.612-.918-.918-.001-.001-.001-.001-.001-.001-.308-.308-.616-.616-.924-.924-.001-.001-.001-.001-.001-.001-.31-.31-.62-.62-.93-.93-.001-.001-.001-.001-.001-.001-.312-.312-.624-.624-.936-.936-.001-.001-.001-.001-.001-.001-.314-.314-.628-.628-.942-.942-.001-.001-.001-.001-.001-.001-.316-.316-.632-.632-.948-.948-.001-.001-.001-.001-.001-.001-.318-.318-.636-.636-.954-.954-.001-.001-.001-.001-.001-.001-.32-.32-.64-.64-.96-.96-.001-.001-.001-.001-.001-.001-.322-.322-.644-.644-.966-.966-.001-.001-.001-.001-.001-.001-.324-.324-.648-.648-.972-.972-.001-.001-.001-.001-.001-.001-.326-.326-.652-.652-.978-.978-.001-.001-.001-.001-.001-.001-.328-.328-.656-.656-.984-.984-.001-.001-.001-.001-.001-.001-.33-.33-.66-.66-.99-.99-.001-.001-.001-.001-.001-.001-.332-.332-.664-.664-.996-.996-.001-.001-.001-.001-.001-.001-.334-.334-.668-.668-1.002-1.002-.001-.001-.001-.001-.001-.001-.336-.336-.672-.672-1.008-1.008-.001-.001-.001-.001-.001-.001-.338-.338-.676-.676-1.014-1.014-.001-.001-.001-.001-.001-.001-.34-.34-.68-.68-1.02-1.02-.001-.001-.001-.001-.001-.001-.342-.342-.684-.684-1.026-1.026-.001-.001-.001-.001-.001-.001-.344-.344-.688-.688-1.032-1.032-.001-.001-.001-.001-.001-.001-.346-.346-.692-.692-1.038-1.038-.001-.001-.001-.001-.001-.001-.348-.348-.696-.696-1.044-1.044-.001-.001-.001-.001-.001-.001-.35-.35-.7-.7-1.05-1.05-.001-.001-.001-.001-.001-.001-.352-.352-.704-.704-1.056-1.056-.001-.001-.001-.001-.001-.001-.354-.354-.708-.708-1.062-1.062-.001-.001-.001-.001-.001-.001-.356-.356-.712-.712-1.068-1.068-.001-.001-.001-.001-.001-.001-.358-.358-.716-.716-1.074-1.074-.001-.001-.001-.001-.001-.001-.36-.36-.72-.72-1.08-1.08-.001-.001-.001-.001-.001-.001-.362-.362-.724-.724-1.086-1.086-.001-.001-.001-.001-.001-.001-.364-.364-.728-.728-1.092-1.092-.001-.001-.001-.001-.001-.001-.366-.366-.732-.732-1.098-1.098-.001-.001-.001-.001-.001-.001-.368-.368-.736-.736-1.104-1.104-.001-.001-.001-.001-.001-.001-.37-.37-.74-.74-1.11-1.11-.001-.001-.001-.001-.001-.001-.372-.372-.744-.744-1.116-1.116-.001-.001-.001-.001-.001-.001-.374-.374-.748-.748-1.122-1.122-.001-.001-.001-.001-.001-.001-.376-.376-.752-.752-1.128-1.128-.001-.001-.001-.001-.001-.001-.378-.378-.756-.756-1.134-1.134-.001-.001-.001-.001-.001-.001-.38-.38-.76-.76-1.14-1.14-.001-.001-.001-.001-.001-.001-.382-.382-.764-.764-1.146-1.146-.001-.001-.001-.001-.001-.001-.384-.384-.768-.768-1.152-1.152-.001-.001-.001-.001-.001-.001-.386-.386-.772-.772-1.158-1.158-.001-.001-.001-.001-.001-.001-.388-.388-.776-.776-1.164-1.164-.001-.001-.001-.001-.001-.001-.39-.39-.78-.78-1.17-1.17-.001-.001-.001-.001-.001-.001-.392-.392-.784-.784-1.176-1.176-.001-.001-.001-.001-.001-.001-.394-.394-.788-.788-1.182-1.182-.001-.001-.001-.001-.001-.001-.396-.396-.792-.792-1.188-1.188-.001-.001-.001-.001-.001-.001-.398-.398-.796-.796-1.194-1.194-.001-.001-.001-.001-.001-.001-.4-.4-.8-.8-1.2-1.2-.001-.001-.001-.001-.001-.001-.402-.402-.804-.804-1.206-1.206-.001-.001-.001-.001-.001-.001-.404-.404-.808-.808-1.212-1.212-.001-.001-.001-.001-.001-.001-.406-.406-.812-.812-1.218-1.218-.001-.001-.001-.001-.001-.001-.408-.408-.816-.816-1.224-1.224-.001-.001-.001-.001-.001-.001-.41-.41-.82-.82-1.23-1.23-.001-.001-.001-.001-.001-.001-.412-.412-.824-.824-1.236-1.236-.001-.001-.001-.001-.001-.001-.414-.414-.828-.828-1.242-1.242-.001-.001-.001-.001-.001-.001-.416-.416-.832-.832-1.248-1.248-.001-.001-.001-.001-.001-.001-.418-.418-.836-.836-1.254-1.254-.001-.001-.001-.001-.001-.001-.42-.42-.84-.84-1.26-1.26-.001-.001-.001-.001-.001-.001-.422-.422-.844-.844-1.266-1.266-.001-.001-.001-.001-.001-.001-.424-.424-.848-.848-1.272-1.272-.001-.001-.001-.001-.001-.001-.426-.426-.852-.852-1.278-1.278-.001-.001-.001-.001-.001-.001-.428-.428-.856-.856-1.284-1.284-.001-.001-.001-.001-.001-.001-.43-.43-.86-.86-1.29-1.29-.001-.001-.001-.001-.001-.001-.432-.432-.864-.864-1.296-1.296-.001-.001-.001-.001-.001-.001-.434-.434-.868-.868-1.302-1.302-.001-.001-.001-.001-.001-.001-.436-.436-.872-.872-1.308-1.308-.001-.001-.001-.001-.001-.001-.438-.438-.876-.876-1.314-1.314-.001-.001-.001-.001-.001-.001-.44-.44-.88-.88-1.32-1.32-.001-.001-.001-.001-.001-.001-.442-.442-.884-.884-1.326-1.326-.001-.001-.001-.001-.001-.001-.444-.444-.888-.888-1.332-1.332-.001-.001-.001-.001-.001-.001-.446-.446-.892-.892-1.338-1.338-.001-.001-.001-.001-.001-.001-.448-.448-.896-.896-1.344-1.344-.001-.001-.001-.001-.001-.001-.45-.45-.9-.9-1.35-1.35-.001-.001-.001-.001-.001-.001-.452-.452-.904-.904-1.356-1.356-.001-.001-.001-.001-.001-.001-.454-.454-.908-.908-1.362-1.362-.001-.001-.001-.001-.001-.001-.456-.456-.912-.912-1.368-1.368-.001-.001-.001-.001-.001-.001-.458-.458-.916-.916-1.374-1.374-.001-.001-.001-.001-.001-.001-.46-.46-.92-.92-1.38-1.38-.001-.001-.001-.001-.001-.001-.462-.462-.924-.924-1.386-1.386-.001-.001-.001-.001-.001-.001-.464-.464-.928-.928-1.392-1.392-.001-.001-.001-.001-.001-.001-.466-.466-.932-.932-1.398-1.398-.001-.001-.001-.001-.001-.001-.468-.468-.936-.936-1.404-1.404-.001-.001-.001-.001-.001-.001-.47-.47-.94-.94-1.41-1.41-.001-.001-.001-.001-.001-.001-.472-.472-.944-.944-1.416-1.416-.001-.001-.001-.001-.001-.001-.474-.474-.948-.948-1.422-1.422-.001-.001-.001-.001-.001-.001-.476-.476-.952-.952-1.428-1.428-.001-.001-.001-.001-.001-.001-.478-.478-.956-.956-1.434-1.434-.001-.001-.001-.001-.001-.001-.48-.48-.96-.96-1.44-1.44-.001-.001-.001-.001-.001-.001-.482-.482-.964-.964-1.446-1.446-.001-.001-.001-.001-.001-.001-.484-.484-.968-.968-1.452-1.452-.001-.001-.001-.001-.001-.001-.486-.486-.972-.972-1.458-1.458-.001-.001-.001-.001-.001-.001-.488-.488-.976-.976-1.464-1.464-.001-.001-.001-.001-.001-.001-.49-.49-.98-.98-1.47-1.47-.001-.001-.001-.001-.001-.001-.492-.492-.984-.984-1.476-1.476-.001-.001-.001-.001-.001-.001-.494-.494-.988-.988-1.482-1.482-.001-.001-.001-.001-.001-.001-.496-.496-.992-.992-1.488-.1488-.001-.001-.001-.001-.001-.001-.498-.498-.996-.996-1.494-.1494-.001-.001-.001-.001-.001-.001-.5-.5-1-1-1.5-1.5z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; <span id="current-year"></span> Edin Herrera Lumba. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Manejo del menú de navegación responsive
+            const navToggle = document.querySelector('.nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', navList.classList.contains('active'));
+            });
+
+            // Cerrar el menú al hacer clic en un enlace (para móviles)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navList.classList.contains('active')) {
+                        navList.classList.remove('active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // Actualizar el año en el footer automáticamente
+            const currentYearSpan = document.getElementById('current-year');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Animación suave de scroll al hacer clic en enlaces de navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Función para generar partículas en la sección Hero
+            function createParticles(numParticles) {
+                const heroSection = document.getElementById('hero');
+                if (!heroSection) return;
+
+                for (let i = 0; i < numParticles; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    
+                    // Posición aleatoria
+                    const x = Math.random() * 100; // % de ancho
+                    const y = Math.random() * 100; // % de alto
+                    particle.style.left = `${x}%`;
+                    particle.style.top = `${y}%`;
+
+                    // Tamaño aleatorio
+                    const size = Math.random() * (25 - 5) + 5; // entre 5px y 25px
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+
+                    // Opacidad inicial aleatoria
+                    particle.style.opacity = Math.random() * (0.5 - 0.1) + 0.1; // entre 0.1 y 0.5
+
+                    // Duración de animación aleatoria
+                    const duration = Math.random() * (20 - 10) + 10; // entre 10s y 20s
+                    particle.style.animationDuration = `${duration}s`;
+                    
+                    // Retraso de animación aleatorio para que no empiecen todas a la vez
+                    const delay = Math.random() * 5; // hasta 5s de retraso
+                    particle.style.animationDelay = `${delay}s`;
+
+                    heroSection.appendChild(particle);
+                }
+            }
+
+            // Generar 10 partículas en la sección Hero
+            createParticles(10);
+        });
+    </script>
+</body>
+</html>
